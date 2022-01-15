@@ -1,5 +1,7 @@
 # Multi-page form using Phoenix LiveView
 
+![Demo](demo.mov)
+
 ## Intro
 
 ### Multi-page form Requirements
