@@ -1,6 +1,6 @@
 # Multi-page form using Phoenix LiveView
 
-![Demo](demo.mov)
+![Demo](./demo_video.mp4)
 
 ## Intro
 
