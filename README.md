@@ -41,18 +41,25 @@ mix phx.new my_app --live
 
 - For simplicity we use the following table:
 
+```
 Coders
+  - Name
+  - City
+  - Country
+  - Preferred Framework
+```
 
-- Name
-- City
-- Country
-- Preferred Framework
+```elixir
+mix phx.gen.context Coders Coder coders name:string city:string country:string framework:string
+```
 
-`mix phx.gen.context Coders Coder coders name:string city:string country:string framework:string`
+```elixir
+mix ecto.migrate
+```
 
-`mix ecto.migrate`
-
-`Coders.create_coder(%{name: "Martin Code", country: "UK", city: "London", framework: "Django"})`
+```elixir
+Coders.create_coder(%{name: "Martin Code", country: "UK", city: "London", framework: "Django"})
+```
 
 ## Modify context and schema to add partial validations
 
