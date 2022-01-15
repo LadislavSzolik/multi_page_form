@@ -1,6 +1,9 @@
 # Multi-page form using Phoenix LiveView
 
-![Demo](./demo_video.mp4)
+
+
+https://user-images.githubusercontent.com/7902218/149623280-72539d8c-b333-4ef8-aa19-6b1a9032d2ba.mp4
+
 
 ## Intro
 
