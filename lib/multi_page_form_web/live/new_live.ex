@@ -23,7 +23,9 @@ defmodule MultiPageFormWeb.NewLive do
     <.form let={f} for={@changeset} phx-submit="save" >
       <%= step_render(@step, f) %>
       <%= live_redirect "Cancel", to: Routes.live_path(@socket, MultiPageFormWeb.List )  %>
-      <%= live_patch "Back", to: Routes.live_path(@socket, __MODULE__, step: @step-1)  %>
+      <%= if @step != 1 do%>
+        <%= live_patch "Back", to: Routes.live_path(@socket, __MODULE__ , step: @step-1)  %>
+      <% end %>
       <%= submit "Next" %>
     </.form>
     """

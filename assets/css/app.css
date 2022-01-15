@@ -9,14 +9,23 @@
 @tailwind utilities;
 
 @layer components {
+  nav {
+    @apply py-2 px-4 border-b border-gray-200 mb-4;
+  }
   a {
-    @apply font-semibold text-sm underline;
+    @apply font-semibold text-sm underline my-2;
   }
   h1 {
-    @apply text-4xl font-black text-teal-800;
+    @apply text-4xl font-black text-teal-800 mb-3;
+  }
+  label {
+    @apply block;
+  }
+  input {
+    @apply mb-2;
   }
   button[type='submit'] {
-    @apply font-semibold text-white bg-teal-700 rounded py-2 px-4;
+    @apply font-semibold text-white bg-teal-700 rounded py-2 px-4 mx-2;
   }
 }
 
@@ -51,7 +60,6 @@
 .invalid-feedback {
   color: #a94442;
   display: block;
-  margin: -1rem 0 2rem;
 }
 
 /* LiveView specific classes for your customization */

@@ -17,8 +17,8 @@ defmodule MultiPageFormWeb.Router do
   scope "/", MultiPageFormWeb do
     pipe_through :browser
 
-    live "/", List
     live "/coders/new", NewLive
+    live "/", List
   end
 
   # Other scopes may use custom stacks.
