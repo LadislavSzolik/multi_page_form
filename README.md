@@ -4,7 +4,7 @@
 
 - Break down complex models into multiple pages for better UX
 - Perform native browser validation on submit
-- Display previously entered values on back navigation
+- Display previously entered values on back navigation (using the buttons, not browser)
 - Persist the model only on the last Submit
 - Navigate back using browser button
 
@@ -15,15 +15,29 @@
 
 ## Create Model Context
 
-Developer
+Coder
 
 - Name
 - City
 - Country
 - Preferred Framework (Django, Ruby on Rails, Phoenix)
 
-`mix phx.gen.context Developers Developer developers name:string city:string country:string framework:string`
+`mix phx.gen.context Coders Coder coders name:string city:string country:string framework:string`
 
 `mix ecto.migrate`
 
-`Developers.create_developer(%{name: "Martin Code", country: "UK", city: "London", framework: "Django"})`
+`Coders.create_coder(%{name: "Martin Code", country: "UK", city: "London", framework: "Django"})`
+
+## Preparing routes
+
+```elixir
+scope "/", MultiPageFormWeb do
+    pipe_through :browser
+
+    live "/", List
+
+    live "/coders/new/name", NewLive, :name
+    live "/coders/new/location", NewLive, :location
+    live "/coders/new/framework", NewLive, :framework
+  end
+```

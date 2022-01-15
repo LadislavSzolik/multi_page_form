@@ -8,6 +8,18 @@
 
 @tailwind utilities;
 
+@layer components {
+  a {
+    @apply font-semibold text-sm underline;
+  }
+  h1 {
+    @apply text-4xl font-black text-teal-800;
+  }
+  button[type='submit'] {
+    @apply font-semibold text-white bg-teal-700 rounded py-2 px-4;
+  }
+}
+
 /* Alerts and form errors used by phx.new */
 .alert {
   padding: 15px;
